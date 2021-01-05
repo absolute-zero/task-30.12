@@ -15,11 +15,7 @@ const currentSums = (numbers) => {
 const str = "Каждый охотник желает знать, где сидит фазан.";
 
 const firstLetters = (str) => {
-    return str.split('').filter((item, index) => {
-        if (str[index - 1] === ' ' || index === 0) {
-            return true;
-        }
-    })
+    return str.split('').filter((item, index) => str[index - 1] === ' ' || index === 0)
 }
 
 // Third task
