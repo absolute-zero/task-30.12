@@ -2,7 +2,7 @@
 const numbers = [2, 3, 5, 7, 11, 13, 17];
 
 const currentSums = (numbers) => {
-    let result = [];
+    const result = [];
     let sum = numbers.reduce((prev, item) => {
         result.push(prev)
         return prev + item;
@@ -11,18 +11,14 @@ const currentSums = (numbers) => {
     return result;
 }
 
-
 // Second task
 const str = "Каждый охотник желает знать, где сидит фазан.";
 
 const firstLetters = (str) => {
-    let prev ='';
     return str.split('').filter((item, index) => {
-        if (!(prev === ' ' || index === 0)) {
-            prev = item;
+        if (!(str[index - 1] === ' ' || index === 0)) {
             return false;
         }
-        prev = item;
         return true;
     })
 }
