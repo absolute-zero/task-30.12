@@ -16,10 +16,9 @@ const str = "Каждый охотник желает знать, где сид�
 
 const firstLetters = (str) => {
     return str.split('').filter((item, index) => {
-        if (!(str[index - 1] === ' ' || index === 0)) {
-            return false;
+        if (str[index - 1] === ' ' || index === 0) {
+            return true;
         }
-        return true;
     })
 }
 
